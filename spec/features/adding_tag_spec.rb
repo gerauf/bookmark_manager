@@ -10,12 +10,13 @@ feature 'Adding tags' do
     expect(page).to have_content 'Bubbles'
   end
 
-  scenario 'I can add miltiple tags' do
+  scenario 'I can add miltiple tags to a new link' do
     visit('links/new')
     fill_in('title', with: 'Bubbleology')
     fill_in('url', with: 'http://bubbleology.co.uk')
     fill_in('tags', with: 'Bubbles, Tea, Drinks, Japan')
     click_button('Add link')
-    expect(page).to have_content 
+    link = Link.all
+    expect(link.tags.map(&:name)).to include("Bubbles", "Tea", "Drinks", "Japan")
   end
 end
