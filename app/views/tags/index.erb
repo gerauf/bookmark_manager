@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<h1>Tags</h1>
+
+<ul id='tags'>
+  <% @links.each do |link| %>
+    <li>
+      <p><a href="tags/<%= link.tags.map(&:name).join %>" target="_blank"><%= link.tags.map(&:name).join %></a></p>
+    </li>
+  <% end %>
+</ul>
+
+</html>

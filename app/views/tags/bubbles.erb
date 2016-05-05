@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<h1>Bubbles</h1>
+
+<ul id='tags'>
+  <% @links.each do |link| %>
+    <% if link.tags.map(&:name).join == 'Bubbles' %>
+      <li>
+        <h3>Title: <%= link.title %></h3>
+        <p>URL: <a href="<%= link.url %>" target="_blank"><%= link.url %></a></p>
+        <p>Tag: <a href="/tags"><%= link.tags.map(&:name).join %></a></p>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+</html>
