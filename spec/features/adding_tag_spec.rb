@@ -9,4 +9,13 @@ feature 'Adding tags' do
     create_link_with_tag
     expect(page).to have_content 'Bubbles'
   end
+
+  scenario 'I can add miltiple tags' do
+    visit('links/new')
+    fill_in('title', with: 'Bubbleology')
+    fill_in('url', with: 'http://bubbleology.co.uk')
+    fill_in('tags', with: 'Bubbles, Tea, Drinks, Japan')
+    click_button('Add link')
+    expect(page).to have_content 
+  end
 end
