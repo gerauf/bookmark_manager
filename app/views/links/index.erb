@@ -4,7 +4,11 @@
 
 <ul id='links'>
   <% @links.each do |link| %>
-    <li><%= link.title %>: <a href="<%= link.url %>" target="_blank"><%= link.url %></a></li>
+    <li>
+      <h3>Title: <%= link.title %></h3>
+      <p>URL: <a href="<%= link.url %>" target="_blank"><%= link.url %></a></p>
+      <p>Tag: <%= link.tags.map(&:name).join %></p>
+    </li>
   <% end %>
 </ul>
 

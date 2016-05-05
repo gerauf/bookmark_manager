@@ -29,5 +29,10 @@ class BookmarkManager < Sinatra::Base
     redirect :'links'
   end
 
+  get '/tags/params[:tags]' do
+    @links = Link.all
+    erb :'tags'
+  end
+
   run! if app_file == $0
 end
