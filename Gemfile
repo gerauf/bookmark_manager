@@ -14,4 +14,5 @@ group :test do
   gem 'capybara'
   gem 'rspec-sinatra'
   gem 'database_cleaner'
+  gem 'timecop'
 end
