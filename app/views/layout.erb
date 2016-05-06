@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="/styles.css" type="text/css" rel="stylesheet"/>
     <title> Bookmark Manager</title>
   </head>
 
   <body>
     <% if current_user %>
     <header align = "right">
-      <h3>
+      <h4>
         Signed in as: <%= current_user.username %>
-      </h3>
+      </h4>
     </header>
     <% end %>
     <%= yield %>
