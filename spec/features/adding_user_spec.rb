@@ -7,7 +7,7 @@ feature 'Adding a user' do
     fill_in 'password', with: 'secret'
 
     expect{click_button('Submit')}.to change(User, :count).by 1
-    expect(page).to have_content "matt1's saved links"
+    expect(page).to have_content "Signed in as: matt1"
 
   end
 

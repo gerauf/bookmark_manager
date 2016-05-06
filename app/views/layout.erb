@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Bookmark Manager</title>
+  </head>
+
+  <body>
+    <% if current_user %>
+    <header align = "right">
+      <h3>
+        Signed in as: <%= current_user.username %>
+      </h3>
+    </header>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
