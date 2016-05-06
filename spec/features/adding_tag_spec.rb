@@ -14,7 +14,7 @@ feature 'Adding tags' do
     visit('links/new')
     fill_in('title', with: 'Bubbleology')
     fill_in('url', with: 'http://bubbleology.co.uk')
-    fill_in('tags', with: 'Bubbles, Tea, Drinks, Japan')
+    fill_in('tags', with: 'Bubbles Tea Drinks Japan')
     click_button('Add link')
     link = Link.all
     expect(link.tags.map(&:name)).to include("Bubbles", "Tea", "Drinks", "Japan")
