@@ -6,13 +6,18 @@
   </head>
 
   <body>
+
     <% if current_user %>
     <header align = "right">
-      <h4>
-        Signed in as: <%= current_user.username %>
-      </h4>
+      <h4>Signed in as: <%= current_user.username %></h4>
     </header>
     <% end %>
+
+    <% if flash[:notice] %>
+    <div id='notice'><%= flash[:notice] %></div>
+    <% end %>
+
     <%= yield %>
+
   </body>
 </html>

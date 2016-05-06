@@ -1,7 +1,7 @@
 Please enter your username and password:
 <form action='/users' method='post'>
-Name:<input type='text' name='username'>
-Email:<input type='text' name='email'>
+Name:<input type='text' name='username' value='<%=@user.username%>'>
+Email:<input type='text' name='email' value='<%=@user.email%>'>
 Password:<input type ='password' name='password'>
 Verify Password:<input type ='password' name='password_confirmation'>
 <input type='submit' value='Submit'>
