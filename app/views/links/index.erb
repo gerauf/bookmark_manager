@@ -1,6 +1,8 @@
-<!DOCTYPE html>
-<html>
-<h1>Saved Links</h1>
+
+
+<% if current_user %>
+<h1><%=current_user.username%>'s saved links</h1>
+<% end %>
 
 <ul id='links'>
   <% @links.each do |link| %>
@@ -16,5 +18,3 @@
 </ul>
 
 <a href="/links/new">Add a link?</a>
-
-</html>
